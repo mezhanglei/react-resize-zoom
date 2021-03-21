@@ -2,7 +2,7 @@
 
 [English](./README.md) | 中文说明
 
-[![Version](https://img.shields.io/badge/version-1.0.0-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-1.0.1-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # 适用场景
 
@@ -45,6 +45,6 @@ import DragResize from 'react-resize-zoom';
 | onResizeStart                 | `function`                        | -                                                  | 拖拽开始事件                                                                                          |
 | onResizeMoving                | `function`                        | -                                                  | 拖拽进行事件                      |
 | onResizeEnd                   | `function`                        | -                                                  | 拖拽结束事件                                                                                  |
-
+| ref                           | `{current: HtmlElement}`          | `props.children`                                   | 子元素的ref                                                                              |
 
 

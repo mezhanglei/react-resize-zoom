@@ -2,7 +2,7 @@
 
 English | [中文说明](./README_CN.md)
 
-[![Version](https://img.shields.io/badge/version-1.0.0-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-1.0.1-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # Introduction?
 
@@ -45,6 +45,7 @@ import DragResize from 'react-resize-zoom';
 | onResizeStart                 | `function`                        | -                                                  | Drag and drop the start event                                                                                          |
 | onResizeMoving                | `function`                        | -                                                  | Drag and drop events                      |
 | onResizeEnd                   | `function`                        | -                                                  | Drag and drop to end the event                                                                                  |
+| ref                           | `{current: HtmlElement}`          | `props.children`                                   | The ref of the child element                                                                                  |
 
 
 
