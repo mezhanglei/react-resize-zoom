@@ -25,7 +25,8 @@ const DragResize = React.forwardRef<any, DragResizeProps>((props, ref) => {
     const {
         children,
         axis = Axis.AUTO,
-        offset = 10
+        offset = 10,
+        zIndexRange = [1, 2]
     } = props;
 
     const nodeRef = useRef<any>();
@@ -136,6 +137,7 @@ const DragResize = React.forwardRef<any, DragResizeProps>((props, ref) => {
             y: clientXY?.y,
             width: clientWH?.width,
             height: clientWH?.height,
+            zIndex: zIndexRange[1]
         }
         const shouldUpdate = props?.onResizeStart && props?.onResizeStart(e, eventData);
         if (shouldUpdate === false) return;
@@ -175,7 +177,8 @@ const DragResize = React.forwardRef<any, DragResizeProps>((props, ref) => {
             x: clientXY?.x,
             y: clientXY?.y,
             width: canDragX(e, lastDir) ? (lastW + deltaX) : lastW,
-            height: canDragY(e, lastDir) ? (lastH + deltaY) : lastH
+            height: canDragY(e, lastDir) ? (lastH + deltaY) : lastH,
+            zIndex: zIndexRange[1]
         }
 
         const shouldUpdate = props?.onResizeMoving && props?.onResizeMoving(e, eventData);
@@ -185,12 +188,16 @@ const DragResize = React.forwardRef<any, DragResizeProps>((props, ref) => {
     }
 
     const onResizeEnd: EventHandler<EventType> = (e) => {
-        if (!isDraggableRef.current) return;
-
-        const shouldContinue = props.onResizeEnd && props.onResizeEnd(e, eventDataRef.current);
+        if (!isDraggableRef.current || !eventDataRef.current) return;
+        const eventData = {
+            ...eventDataRef.current,
+            zIndex: zIndexRange[0]
+        }
+        const shouldContinue = props.onResizeEnd && props.onResizeEnd(e, eventData);
         if (shouldContinue === false) return false;
 
         isDraggableRef.current = false;
+        eventData && eventDataChange(eventData);
     }
 
     // dragOver事件
@@ -205,7 +212,8 @@ const DragResize = React.forwardRef<any, DragResizeProps>((props, ref) => {
         style: {
             ...children.props.style,
             width: eventData?.width ? eventData?.width : children.props.style?.width,
-            height: eventData?.height ? eventData?.height : children.props.style?.height
+            height: eventData?.height ? eventData?.height : children.props.style?.height,
+            zIndex: eventData?.zIndex
         }
     });
 })
