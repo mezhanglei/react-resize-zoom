@@ -1,4 +1,4 @@
-import { JSXElementConstructor, ReactElement } from 'react';
+import { CSSProperties, JSXElementConstructor, ReactElement } from 'react';
 // 事件对象
 export type EventType = MouseEvent | TouchEvent;
 
@@ -32,6 +32,8 @@ export enum Axis {
     ANGLE = 'angle' // 角
 }
 export interface DragResizeProps {
+    className?: string;
+    style?: CSSProperties;
     axis?: 'auto' | 'x' | 'y' | 'angle';
     children: ChildrenType;
     offset?: number; // 鼠标距离边的可以拖拽的偏差
