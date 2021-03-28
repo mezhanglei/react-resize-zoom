@@ -42,9 +42,9 @@ import DragResize from 'react-resize-zoom';
 | ----------------------------- | --------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | axis                          | `auto / x / y / angle`            | -                                                  | 允许控制拖拽的边或角                                                                                  |
 | offset                        | `number`                          | `10`                                               | 离边多远可以拖拽                                                                              |
-| onResizeStart                 | `function`                        | -                                                  | 拖拽开始事件                                                                                          |
-| onResizeMoving                | `function`                        | -                                                  | 拖拽进行事件                      |
-| onResizeEnd                   | `function`                        | -                                                  | 拖拽结束事件                                                                                  |
+| onResizeStart                 | `function`                        | -                                                  | 拖拽开始事件,renturn `false` 可以阻止该事件;                                                                                          |
+| onResizeMoving                | `function`                        | -                                                  | 拖拽进行事件,renturn `false` 可以阻止该事件;                      |
+| onResizeEnd                   | `function`                        | -                                                  | 拖拽结束事件,renturn `false` 可以阻止该事件;                                                                                  |
 | ref                           | `{current: HtmlElement}`          | `props.children`                                   | 子元素的ref                                                                              |
 | zIndexRange                   | `[number, number]`                | `[1, 2]`                                          | 拖拽时可设置的层级范围                                                                                          |
 
