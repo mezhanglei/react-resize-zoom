@@ -2,7 +2,7 @@
 
 English | [中文说明](./README_CN.md)
 
-[![Version](https://img.shields.io/badge/version-1.0.3-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-1.0.4-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # Introduction?
 
@@ -15,8 +15,8 @@ Controls the size of child elements to scale
 
 # Matters
 
-1. The child element cannot be an inline element because transform does not work on inline elements!
-2. 'props. Children' limited to a single closed tag!
+1. The child element cannot be an inline element;
+2. `props. Children` limited to a single closed tag!
 
 ### install
 ```
