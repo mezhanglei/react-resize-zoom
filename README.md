@@ -40,7 +40,7 @@ import DragResize from 'react-resize-zoom';
 
 | name                          | type                  | defaultValue                                                   | description                                                                                                      |
 | ----------------------------- | --------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| axis                          | `auto / x / y / angle`            | -                                                  | Allows control of drag edges or corners                                                                                  |
+| axis                          | `auto / x / y / angle / none`            | -                                           | Allows control of drag edges or corners,`none` stop scaling                                                                                  |
 | offset                        | `number`                          | `10`                                               | How far from the edge can be dragged                                                                              |
 | onResizeStart                 | `function`                        | -                                                  | Drag and drop the start event,renturn `false` can stop it;                                                                                          |
 | onResizeMoving                | `function`                        | -                                                  | Drag and drop events, renturn `false` can stop it;                      |
