@@ -57,6 +57,10 @@ export function removeEvent(el: any, event: string, handler: (...rest: any[]) =>
  * @param el 元素或事件对象
  * @param parent 父元素
  */
+ export interface SizeInterface {
+    x: number;
+    y: number;
+}
 export function getClientXYInParent(el: MouseEvent | TouchEvent | HTMLElement, parent: HTMLElement): null | SizeInterface {
     let pos = null;
     if ("clientX" in el) {
