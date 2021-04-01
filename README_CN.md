@@ -1,6 +1,6 @@
 # react-resize-zoom
 
-[English](https://github.com/mezhanglei/react-resize-zoom/README.md) | 中文说明
+[English](./README.md) | 中文说明
 
 [![Version](https://img.shields.io/badge/version-2.0.0-green)](https://www.npmjs.com/package/react-resize-zoom)
 
