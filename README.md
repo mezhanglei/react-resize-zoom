@@ -1,8 +1,8 @@
 # react-resize-zoom
 
-English | [中文说明](./README_CN.md)
+English | [中文说明](https://github.com/mezhanglei/react-resize-zoom/README_CN.md)
 
-[![Version](https://img.shields.io/badge/version-1.0.6-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.0.0-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # Introduction?
 
@@ -41,6 +41,8 @@ import DragResize from 'react-resize-zoom';
 | name                          | type                  | defaultValue                                                   | description                                                                                                      |
 | ----------------------------- | --------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | axis                          | `auto / x / y / angle / none`            | -                                           | Allows control of drag edges or corners,`none` stop scaling                                                                                  |
+| width                         | `number`                          | -                                                  | width                                                                                  |
+| height                        | `number`                          | -                                                  | height                                                                                  |
 | offset                        | `number`                          | `10`                                               | How far from the edge can be dragged                                                                              |
 | onResizeStart                 | `function`                        | -                                                  | Drag and drop the start event,renturn `false` can stop it;                                                                                          |
 | onResizeMoving                | `function`                        | -                                                  | Drag and drop events, renturn `false` can stop it;                      |

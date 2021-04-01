@@ -1,8 +1,8 @@
 # react-resize-zoom
 
-[English](./README.md) | 中文说明
+[English](https://github.com/mezhanglei/react-resize-zoom/README.md) | 中文说明
 
-[![Version](https://img.shields.io/badge/version-1.0.6-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.0.0-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # 适用场景
 
@@ -40,7 +40,9 @@ import DragResize from 'react-resize-zoom';
 
 | 名称                          | 类型                  | 默认值                                                         | 描述                                                                                                      |
 | ----------------------------- | --------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| axis                          | `auto / x / y / angle / none`            | -                                           | 允许控制拖拽的边或角, `none`禁止缩放                                                                                  |
+| axis                          | `auto / x / y / angle / none`     | -                                                  | 允许控制拖拽的边或角, `none`禁止缩放                                                                                  |
+| width                         | `number`                          | -                                                  | 宽                                                                                  |
+| height                        | `number`                          | -                                                  | 高                                                                                  |
 | offset                        | `number`                          | `10`                                               | 离边多远可以拖拽                                                                              |
 | onResizeStart                 | `function`                        | -                                                  | 拖拽开始事件,renturn `false` 可以阻止该事件;                                                                                          |
 | onResizeMoving                | `function`                        | -                                                  | 拖拽进行事件,renturn `false` 可以阻止该事件;                      |
