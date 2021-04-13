@@ -1,6 +1,6 @@
 {
   "name": "react-resize-zoom",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "控制子元素的大小进行缩放",
   "main": "lib/bundle.js",
   "repository": "https://github.com/mezhanglei",
