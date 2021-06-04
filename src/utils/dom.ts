@@ -52,16 +52,16 @@ export function removeEvent(el: any, event: string, handler: (...rest: any[]) =>
     }
 }
 
-/**
- * 返回元素或事件对象相对于父元素的窗口位置
- * @param el 元素或事件对象
- * @param parent 父元素
- */
  export interface SizeInterface {
     x: number;
     y: number;
 }
-export function getClientXYInParent(el: MouseEvent | TouchEvent | HTMLElement, parent: HTMLElement): null | SizeInterface {
+/**
+ * 返回元素或事件对象相对于父元素的真实位置
+ * @param el 元素或事件对象
+ * @param parent 父元素
+ */
+ export function getPositionInParent(el: MouseEvent | TouchEvent | HTMLElement, parent: HTMLElement): null | SizeInterface {
     let pos = null;
     if ("clientX" in el) {
         pos = {
