@@ -2,7 +2,7 @@
 
 English | [中文说明](./README_CN.md)
 
-[![Version](https://img.shields.io/badge/version-2.0.8-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.0.9-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # Introduction?
 
@@ -12,7 +12,6 @@ Controls the size of child elements to scale
 
 - [x] Support for scaling the size of elements (not yet Canvas), providing flexible API controls for scaling edges or corners
 - [x] Other properties of the wrapped `props.children` (properties that are not `draggResize` related) are not affected by `react-resize-zoom`. It's still the same as not being wrapped
-- [x] The scope of the drag is controlled by whether the event returns`false` or not to continue scaling
 
 # Matters
 
@@ -46,9 +45,9 @@ import DragResize from 'react-resize-zoom';
 | width                         | `number`                          | -                                                  | width                                                                                  |
 | height                        | `number`                          | -                                                  | height                                                                                  |
 | offset                        | `number`                          | `10`                                               | How far from the edge can be dragged                                                                              |
-| onResizeStart                 | `function`                        | -                                                  | Drag and drop the start event,renturn `false` can stop it;                                                                                          |
-| onResizeMoving                | `function`                        | -                                                  | Drag and drop events, renturn `false` can stop it;                      |
-| onResizeEnd                   | `function`                        | -                                                  | Drag and drop to end the event,renturn `false` can stop it;                                                                                  |
+| onResizeStart                 | `function`                        | -                                                  | Drag scaling the start event;                                                                                          |
+| onResizeMoving                | `function`                        | -                                                  | Drag scaling events                      |
+| onResizeEnd                   | `function`                        | -                                                  | Drag scaling end the event                                                                                  |
 | ref                           | `{current: HtmlElement}`          | `props.children`                                   | The ref of the child element                                                                                  |
 | zIndexRange                   | `[number, number]`                | `[]`                                               | The `zIndex` range that can be set when dragging and dropping                                                                                          |
 
