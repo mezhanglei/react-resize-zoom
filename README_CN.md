@@ -2,15 +2,15 @@
 
 [English](./README.md) | 中文说明
 
-[![Version](https://img.shields.io/badge/version-2.0.11-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.0.12-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # 适用场景
 
-控制子元素的大小进行缩放
+在不影响被包裹元素的样式情况下进行元素缩放
 
 # features
 
-- [x] 支持对元素(暂未支持canvas)的大小尺寸进行缩放,提供灵活的api控制边或角进行缩放
+- [x] 支持对div元素的大小尺寸进行缩放,提供灵活的api控制边或角进行缩放
 - [x] 被包裹的`props.children`的其他属性(非拖拽相关的属性)不会受到`react-resize-zoom`组件影响.仍和没有被包裹一样.
 
 # 注意事项

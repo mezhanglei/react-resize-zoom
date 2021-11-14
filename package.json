@@ -1,6 +1,6 @@
 {
   "name": "react-resize-zoom",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "description": "控制子元素的大小进行缩放",
   "main": "lib/bundle.js",
   "repository": "https://github.com/mezhanglei",
@@ -10,6 +10,7 @@
     "README_CN.md"
   ],
   "scripts": {
+    "build-typings": "tsc -d --emitDeclarationOnly --target esnext --removeComments false --allowJs false --declarationDir ./lib",
     "build": "cross-env NODE_ENV=production webpack --progress --config ./webpack/webpack.prod.js",
     "stats": "cross-env NODE_ENV=production webpack --progress --config ./webpack/webpack.prod.js --json > stats.json",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack/webpack.dev.js --open",

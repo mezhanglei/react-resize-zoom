@@ -2,15 +2,15 @@
 
 English | [中文说明](./README_CN.md)
 
-[![Version](https://img.shields.io/badge/version-2.0.11-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.0.12-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # Introduction?
 
-Controls the size of child elements to scale
+Element scaling without affecting the style of the wrapped element
 
 # featrues
 
-- [x] Support for scaling the size of elements (not yet Canvas), providing flexible API controls for scaling edges or corners
+- [x] Support for scaling the size of div elements, providing flexible API controls for scaling edges or corners
 - [x] Other properties of the wrapped `props.children` (properties that are not `draggResize` related) are not affected by `react-resize-zoom`. It's still the same as not being wrapped
 
 # Matters
