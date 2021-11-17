@@ -2,7 +2,7 @@
 
 [English](./README.md) | 中文说明
 
-[![Version](https://img.shields.io/badge/version-2.0.14-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.1.0-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # 适用场景
 
@@ -40,7 +40,7 @@ import DragResize from 'react-resize-zoom';
 
 | 名称                          | 类型                  | 默认值                                                         | 描述                                                                                                      |
 | ----------------------------- | --------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| axis                          | `auto / x / y / angle / none`     | -                                                  | 允许控制拖拽的边或角, `none`禁止缩放                                                                                  |
+| axis                          | `['e', 'w', 's', 'n', 'ne', 'nw', 'se', 'sw']`     | -                                                  | 允许控制拖拽的边或角                                                                                  |
 | forbid                          | `boolean`     | -                                                  | 禁止缩放                                                                                  |
 | width                         | `number`                          | -                                                  | 宽                                                                                  |
 | height                        | `number`                          | -                                                  | 高                                                                                  |
