@@ -319,7 +319,7 @@ class DragResize extends React.Component<DragResizeProps, DragResizeState> {
         } = this.state;
 
         const originStyle = (attr: string) => {
-            return style?.[attr] ?? children.props.style[attr];
+            return style?.[attr] ?? children.props.style?.[attr];
         }
 
         return React.cloneElement(React.Children.only(children), {
