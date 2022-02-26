@@ -2,7 +2,7 @@
 
 English | [中文说明](./README_CN.md)
 
-[![Version](https://img.shields.io/badge/version-2.1.4-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.1.6-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # Introduction?
 
@@ -10,8 +10,8 @@ Element scaling without affecting the style of the wrapped element
 
 # featrues
 
-- [x] Support for scaling the size of div elements, providing flexible API controls for scaling edges or corners
-- [x] Other properties of the wrapped `props.children` (properties that are not `draggResize` related) are not affected by `react-resize-zoom`. It's still the same as not being wrapped
+- Support for scaling the size of div elements, providing flexible API controls for scaling edges or corners
+- Other properties of the wrapped `props.children` (properties that are not `draggResize` related) are not affected by `react-resize-zoom`. It's still the same as not being wrapped
 
 # Matters
 
@@ -48,6 +48,7 @@ import DragResize from 'react-resize-zoom';
 | onResizeStart                 | `function`                        | -                                                  | Drag scaling the start event;                                                                                          |
 | onResizeMoving                | `function`                        | -                                                  | Drag scaling events                      |
 | onResizeEnd                   | `function`                        | -                                                  | Drag scaling end the event                                                                                  |
+| fixed                         | `boolean`        |                                   | Is the width and height fixed when it is an uncontrolled component                                                                              |
 | ref                           | `{current: HtmlElement}`          | `props.children`                                   | The ref of the child element                                                                                  |
 
 

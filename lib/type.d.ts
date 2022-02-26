@@ -40,8 +40,10 @@ export interface DragResizeProps {
     onResizeMoving?: EventHandler;
     onResizeEnd?: EventHandler;
     forwardedRef?: any;
+    fixed?: boolean;
 }
 export interface DragResizeState {
+    dragging?: boolean;
     nowStyle?: NowStyle;
     prevWidth?: number;
     prevHeight?: number;
