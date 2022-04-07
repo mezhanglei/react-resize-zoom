@@ -4,9 +4,10 @@ import DragResize from '../../../src/index';
 
 
 const Home: React.FC<any> = (props) => {
-const onResizeEnd = () => {
+    const onResizeEnd = () => {
 
-}
+    };
+
     return (
         <>
             <DragResize onResizeEnd={onResizeEnd}>
@@ -16,6 +17,6 @@ const onResizeEnd = () => {
             </DragResize>
         </>
     );
-}
+};
 
 export default Home;

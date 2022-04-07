@@ -15,6 +15,12 @@ export function getRect(el: HTMLElement) {
   return el.getBoundingClientRect()
 }
 
+// 获取当前的window
+export const getWindow = (el?: any) => {
+  const ownerDocument = el?.ownerDocument || document?.ownerDocument;
+  return ownerDocument ? (ownerDocument.defaultView || window) : window;
+};
+
 /**
  * 返回事件对象相对于父元素的真实位置
  * @param el 事件对象

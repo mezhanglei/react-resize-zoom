@@ -2,7 +2,7 @@
 
 English | [中文说明](./README_CN.md)
 
-[![Version](https://img.shields.io/badge/version-2.1.7-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.2.0-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # Introduction?
 
@@ -40,7 +40,7 @@ import DragResize from 'react-resize-zoom';
 
 | name                          | type                  | defaultValue                                                   | description                                                                                                      |
 | ----------------------------- | --------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| axis                          | `['e', 'w', 's', 'n', 'ne', 'nw', 'se', 'sw']`            | -                                           | Allows control of drag edges or corners                                                                                  |
+| direction                          | `['e', 'w', 's', 'n', 'ne', 'nw', 'se', 'sw']`            | -                                           | Allows control of drag edges or corners                                                                                  |
 | forbid                          | `boolean`     | -                                                  | forbid scaling                                                                                  |
 | width                         | `number`                          | -                                                  | width                                                                                  |
 | height                        | `number`                          | -                                                  | height                                                                                  |
@@ -49,6 +49,7 @@ import DragResize from 'react-resize-zoom';
 | onResizeMoving                | `function`                        | -                                                  | Drag scaling events                      |
 | onResizeEnd                   | `function`                        | -                                                  | Drag scaling end the event                                                                                  |
 | fixed                         | `boolean`        |                                   | Is the width and height fixed when it is an uncontrolled component                                                                              |
+| childProps                           | `any`          | `props.children`                                   | children's props                                                                                  |
 | ref                           | `{current: HtmlElement}`          | `props.children`                                   | The ref of the child element                                                                                  |
 
 

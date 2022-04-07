@@ -2,9 +2,9 @@ import { CSSProperties, JSXElementConstructor, ReactElement } from 'react';
 export declare type EventType = MouseEvent | TouchEvent;
 export declare type ChildrenType = ReactElement<any, string | JSXElementConstructor<any>>;
 export declare enum ResizeDragTypes {
-    resizeStart = "resizeStart",
-    resizing = "resizing",
-    resizeEnd = "resizeEnd"
+    ResizeStart = "resizeStart",
+    Resizing = "resizing",
+    ResizeEnd = "resizeEnd"
 }
 export interface LastStyle {
     width: number;
@@ -30,10 +30,10 @@ export declare const DirectionCode: Direction[];
 export interface DragResizeProps {
     className?: string;
     style?: CSSProperties;
-    axis: Direction[];
+    direction?: Direction[];
     forbid?: boolean;
     children: any;
-    offset: number;
+    offset?: number;
     width?: number;
     height?: number;
     onResizeStart?: EventHandler;
@@ -41,6 +41,7 @@ export interface DragResizeProps {
     onResizeEnd?: EventHandler;
     forwardedRef?: any;
     fixed?: boolean;
+    childProps?: any;
 }
 export interface DragResizeState {
     dragging?: boolean;

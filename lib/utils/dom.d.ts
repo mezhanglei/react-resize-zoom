@@ -5,6 +5,7 @@ export declare function isDom(ele: any): boolean;
  * @returns
  */
 export declare function getRect(el: HTMLElement): DOMRect;
+export declare const getWindow: (el?: any) => any;
 /**
  * 返回事件对象相对于父元素的真实位置
  * @param el 事件对象

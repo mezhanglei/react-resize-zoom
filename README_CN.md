@@ -2,7 +2,7 @@
 
 [English](./README.md) | 中文说明
 
-[![Version](https://img.shields.io/badge/version-2.1.7-green)](https://www.npmjs.com/package/react-resize-zoom)
+[![Version](https://img.shields.io/badge/version-2.2.0-green)](https://www.npmjs.com/package/react-resize-zoom)
 
 # 适用场景
 
@@ -40,7 +40,7 @@ import DragResize from 'react-resize-zoom';
 
 | 名称                          | 类型                  | 默认值                                                         | 描述                                                                                                      |
 | ----------------------------- | --------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| axis                          | `['e', 'w', 's', 'n', 'ne', 'nw', 'se', 'sw']`     | -                                                  | 允许控制拖拽的边或角                                                                                  |
+| direction                          | `['e', 'w', 's', 'n', 'ne', 'nw', 'se', 'sw']`     | -                                                  | 允许控制拖拽的边或角                                                                                  |
 | forbid                          | `boolean`     | -                                                  | 禁止缩放                                                                                  |
 | width                         | `number`                          | -                                                  | 宽                                                                                  |
 | height                        | `number`                          | -                                                  | 高                                                                                  |
@@ -49,5 +49,6 @@ import DragResize from 'react-resize-zoom';
 | onResizeMoving                | `function`                        | -                                                  | 拖拽进行事件                      |
 | onResizeEnd                   | `function`                        | -                                                  | 拖拽结束事件                                                                                 |
 | fixed                         | `boolean`      |                                   | 当为非受控组件时，是否固定宽高                                                                              |
+| childProps                           | `any`          | `-`                                   | 子元素的props                                                                              |
 | ref                           | `{current: HtmlElement}`          | `props.children`                                   | 子元素的ref                                                                              |
  
