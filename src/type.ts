@@ -22,7 +22,7 @@ export interface NowStyle {
   width: number;
   height: number;
 }
-export enum Direction {
+export enum ResizeDirection {
   N = "n", // 上边
   S = "s", // 下边
   W = "w", // 左边
@@ -32,12 +32,12 @@ export enum Direction {
   SE = "se", // 右下
   SW = "sw", // 左下
 }
-export const DirectionCode = Object.values(Direction);
+export const ResizeDirectionCode = Object.values(ResizeDirection);
 
 export interface DragResizeProps {
   className?: string;
   style?: CSSProperties;
-  direction?: Direction[];
+  direction?: string[];
   forbid?: boolean;
   children: any;
   offset?: number; // 鼠标距离边的可以拖拽的偏差
@@ -48,7 +48,7 @@ export interface DragResizeProps {
   onResizeEnd?: EventHandler; // 拖拽结束事件
   forwardedRef?: any; // 拖拽目标的ref
   fixed?: boolean; // 当为非受控组件时，是否固定宽高
-  childProps?: any;
+  childProps?: any
 }
 
 export interface DragResizeState {

@@ -16,7 +16,7 @@ export interface NowStyle {
     width: number;
     height: number;
 }
-export declare enum Direction {
+export declare enum ResizeDirection {
     N = "n",
     S = "s",
     W = "w",
@@ -26,11 +26,11 @@ export declare enum Direction {
     SE = "se",
     SW = "sw"
 }
-export declare const DirectionCode: Direction[];
+export declare const ResizeDirectionCode: ResizeDirection[];
 export interface DragResizeProps {
     className?: string;
     style?: CSSProperties;
-    direction?: Direction[];
+    direction?: string[];
     forbid?: boolean;
     children: any;
     offset?: number;
