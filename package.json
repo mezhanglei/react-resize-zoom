@@ -1,6 +1,6 @@
 {
   "name": "react-resize-zoom",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "控制子元素的大小进行缩放",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.20.1",
     "@babel/runtime-corejs3": "^7.17.9",
     "@types/classnames": "^2.2.11",
     "@types/react": "^16.14.21",

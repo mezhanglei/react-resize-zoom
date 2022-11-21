@@ -57,8 +57,9 @@ export function getOffsetWH(el: HTMLElement): undefined | {
     return;
   }
   if ([document.documentElement, document.body].includes(el)) {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const win = getWindow(el);
+    const width = win.innerWidth;
+    const height = win.innerHeight;
     return { width, height };
   } else {
     const width = el.offsetWidth;
