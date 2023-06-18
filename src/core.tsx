@@ -2,8 +2,6 @@ import React from 'react';
 import { isMobile } from "./utils/verify";
 import { addEvent, removeEvent, getEventPosition, getOffsetWH, getWindow } from "./utils/dom";
 import { EventType, EventHandler, ResizeDirection, DragResizeProps, DragResizeState, ResizeDirectionCode, LastStyle, ResizeDragTypes, NowStyle } from "./type";
-import ReactDOM from 'react-dom';
-import { mergeObject } from './utils/object';
 
 // Simple abstraction for dragging events names.
 const eventsFor = {
@@ -27,8 +25,10 @@ class DragResize extends React.Component<DragResizeProps, DragResizeState> {
   dir?: string;
   dragType?: ResizeDragTypes;
   isUninstall?: boolean;
+  handleRef: any;
   constructor(props: DragResizeProps) {
     super(props);
+    this.handleRef = React.createRef();
     this.state = {
     };
   }
@@ -50,10 +50,12 @@ class DragResize extends React.Component<DragResizeProps, DragResizeState> {
 
   // 非拖拽元素设置宽高
   setStyle = (oldStyle: NowStyle, newWidth?: number, newHeight?: number) => {
-    const newStyle = mergeObject(oldStyle, {
+    if (typeof newWidth !== 'number' || typeof newHeight !== 'number') return
+    const newStyle = {
+      ...oldStyle,
       width: newWidth,
       height: newHeight
-    })
+    }
     this.setState({
       nowStyle: newStyle
     });
@@ -101,7 +103,7 @@ class DragResize extends React.Component<DragResizeProps, DragResizeState> {
   }
 
   findDOMNode() {
-    return this.props?.forwardedRef?.current || ReactDOM.findDOMNode(this);
+    return this.props?.forwardedRef?.current || this.handleRef?.current;
   }
 
   getStyleWH = () => {
@@ -329,10 +331,13 @@ class DragResize extends React.Component<DragResizeProps, DragResizeState> {
       nowStyle
     } = this.state;
 
+    const ref = forwardedRef ?? this.handleRef;
+    const mergeStyle = { ...children?.props?.style, ...style, ...nowStyle };
+
     return React.cloneElement(React.Children.only(children), {
       className: className ?? children.props?.className,
-      ref: forwardedRef,
-      style: mergeObject({ ...children.props.style, ...style }, nowStyle),
+      ref: ref,
+      style: mergeStyle,
       ...childProps
     });
   }

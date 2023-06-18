@@ -1,6 +1,6 @@
 {
   "name": "react-resize-zoom",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "控制子元素的大小进行缩放",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
